@@ -312,6 +312,7 @@
   (gl:viewport 0 0 width height)
   )
 
+#+spacenav
 (defun handle-3d-mouse-event (window event)
   (format t "window ~a event ~a~%" window event))
 
@@ -430,7 +431,8 @@
         (setf *tile-viewer* nil)
         (gl-cleanup tv))
       #+spacenav(sn:sn-close)
-      (glfw:destroy-window window)))
+      (glfw:destroy-window window)
+      (glfw:poll-events)))
   (library-terminate))
 
 

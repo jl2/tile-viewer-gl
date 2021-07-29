@@ -22,6 +22,7 @@
   :serial t
   :depends-on (
                ;; My libraries
+               #+spacenav
                #:spacenav
                #:blend2d
                #:j-utils
